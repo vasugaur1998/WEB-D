@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+       <style>
+     
+     *{
+        box-sizing:border-box;
+        }
+
+        body{
+            padding:0;
+            margin:0;
+        }
+
+        .flex-container{
+            width:90vw;
+            height:80vh;
+            margin:auto;
+            background-color: lightslategray;
+            display:flex;
+            justify-content:right;
+        }
+        .box{
+            width:7rem;
+            /* agr height nhi di to voh box poori height lelenge */
+            height:7rem;
+            flex-shrink:1;
+        }
+       
+        .box-1{
+            background-color: lightblue;
+            /* flex-grow: 1; */
+        }
+        .box-2{
+            background-color: lightgreen;
+            /* flex-grow:3;*/
+        }
+        .box-3{
+            background-color: lightpink;
+        }
+        .box-4{
+            background-color: black;
+        }
+    
+    
+    
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+     <div class="box box-1"></div>
+      <div class="box box-2"></div>
+      <div class=" box box-3"></div>
+      <div class="box  box-4"></div>
+    </div>
+</body>
+</html>

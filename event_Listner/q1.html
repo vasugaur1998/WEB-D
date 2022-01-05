@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <button>sayHello</button>
+     <script>
+    //    Query1: On clicking the button appned hello to the page
+    // for that we have to select the element on which we have to work
+     let btn=document.querySelector("button");
+     btn.addEventListener("click",function(e){
+         let divElem=document.createElement("div");
+         divElem.innerText="Hello!";
+         let body=document.querySelector("body");
+         body.appendChild(divElem);
+     })
+
+     </script> 
+</body>
+</html>
