@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+    <style>
+      *{
+          box-sizing:border-box;
+      }
+     .container{
+         display:flex;
+         flex-wrap: wrap;
+         justify-content: space-around;
+         padding-top:5rem;
+     }
+
+     .red{
+         background-color: red;
+     }
+
+     .card{
+         border:1px solid;
+         height:10rem;
+         width:10rem;
+         margin:2rem;
+     }
+
+
+
+    </style>
+</head>
+<body>
+       <div class="container">
+
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card red"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+
+
+
+       </div>
+       <script>
+    // Q- create a generic function to select all sibling of a given node, using that function delete all siblings of red card//
+    
+    let redElemNode=document.querySelector(".red");
+    delelteAllSiblings(redElemNode);
+
+    function delelteAllSiblings(redElem){
+        let before=redElem.previousElementSibling;
+        let after =redElem.nextElementSibling;
+
+        while(before){
+            before.remove();
+            before=redElem.nextElementSibling;
+        }
+        while(after){
+            after.remove();
+            after-redElem.nextElementSibling;
+        }
+    }
+
+       </script>
+</body>
+</html>

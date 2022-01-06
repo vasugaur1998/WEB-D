@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <style>
+
+     .cell{
+         border:1px solid;
+         margin:auto;
+         margin-top:10rem;
+         height:20rem;
+         width:20rem;
+         display: flex;
+     }
+      </style>
+</head>
+<body>
+    
+   <div class="cell"></div>
+    <script>
+
+    //   jail the Mouse
+    // Q you are given an empty cell. write a script that whenever the mouse enters the cell jail should be drawn over it space-aroundit should
+    // be removed onmce it leaves
+     
+
+    let cell=document.querySelector(".cell");
+    cell.addEventListener("mouseenter",(e)=>{
+        cell.style.backgroundImage="url(./jail.png)";
+    })
+    cell.addEventListener("mouseleave",(e)=>{
+        cell.style.backgroundImage="none";
+    })
+
+
+
+    </script>
+
+
+</body>
+</html>

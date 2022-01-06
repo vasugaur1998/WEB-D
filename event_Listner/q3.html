@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+           
+            border: 2px solid black;
+            width: 50px;
+            height: 50px;
+            margin: 20px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="card" data-color="blue"></div>
+    <div class="card" data-color="red"></div>
+    <div class="card" data-color="blue"></div>
+    <div class="card" data-color="red"></div>
+    <div class="card" data-color="red"></div>
+    <div class="card" data-color="green"></div>
+    <div class="card" data-color="blue"></div>
+    <div class="card" data-color="green"></div>
+    <div class="card" data-color="blue"></div>
+
+
+    <!-- Q- write a script which fetches the data color attribute of the card on double clicking on them and attaches the 
+     fetched class to that card. Also changes the data color attribute to "used" -->
+
+
+     <!-- ab dbl click pe color set hojayega and phirse dbl click pe color hhat jayega -->
+
+
+    <script>
+        let allCards = document.querySelectorAll(".card");
+        allCards.forEach((card) => {
+            card.addEventListener("dblclick", (e) => {
+               // console.log(card.style.backgroundColor);
+                if (card.style.backgroundColor) {
+
+    //   line above ka matlb hai ki agr string ki value hui 0 to false else true::-- js ka concept//
+
+
+
+                    let bg = card.style.backgroundColor;
+                    card.style.backgroundColor = "";
+                    card.setAttribute("data-color", bg);
+                }
+                else {
+                    let dataColor = card.getAttribute("data-color");
+                    console.log(dataColor)
+                    card.classList.add(dataColor);
+                    card.style.backgroundColor = dataColor;
+                    card.setAttribute("data-color", "used");
+                }
+            })
+        })
+
+
+    </script>
+
+
+</body>
+
+</html>
