@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .pink {
+
+            height: 20rem;
+            width: 20rem;
+            margin: auto;
+            background-color: pink;
+            margin-top: 10rem;
+
+
+        }
+
+        .blue {
+            height: 10rem;
+            width: 10rem;
+            margin: auto;
+            background-color: lightblue;
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pink">
+        <div class="blue"></div>
+    </div>
+    <script>
+
+        let pink = document.querySelector(".pink");
+        pink.addEventListener("click", function (e) {
+            if (e.target === e.currentTarget) {
+                alert("pink was clicked");
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
