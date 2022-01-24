@@ -1,9 +1,11 @@
 *{
     box-sizing:border-box;
+    
 }
 body{
     margin:0;
     padding:0;
+    /* background-color:#4bcffa; */
 }
 .toolbox-cont{
     height:5rem;
@@ -57,7 +59,7 @@ body{
     background-color: lightblue;
 }
 .black{
-    background-color: black;
+    background-color: gray;
 }
 
 /* //button pe mouse leke jaoge to color change hoga */
@@ -105,4 +107,44 @@ body{
 }
 .border{
     border:5px solid #d1d8e0; 
+}
+.ticket-cont{
+    height:14rem;
+    width:17rem;
+    background-color: #f1f2f6;
+    /* background-color: #fed330; */
+}
+
+.ticket-color{
+ height:1rem;
+ 
+}
+
+.ticket-id{
+    height:2rem;
+    
+    padding:0.4rem;
+}
+
+.task-area{
+    height: calc(100% - 1rem - 2rem - 2rem);
+    /* background-color: #fc5c65; */
+    
+    padding : 0.4rem;
+}
+.main-cont{
+    display:flex;
+    flex-wrap: wrap;
+    padding:2rem;
+    gap:2rem;
+    
+}
+.ticket-lock{
+    height:2rem;
+    display:flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    font-size:1.5rem;
+    color:#7e96b1;
+    background-color: lightblue;
 }
